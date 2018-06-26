@@ -18,7 +18,7 @@ from django.contrib import admin
 from views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r"init", InitializeData),
+    url(r"^$", InitializeData),
     url(r"allhotels", HotelList),
     url(r"hotelincity", HotelInCity),
     url(r"reservationlist", ReservationList),

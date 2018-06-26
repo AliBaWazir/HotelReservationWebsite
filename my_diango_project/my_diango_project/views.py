@@ -50,7 +50,7 @@ def HotelList(request):
     #InitializeData(None)
     hotel_list = Hotel.hotels
     if len(hotel_list) == 0:
-        return HttpResponse('No hotels exist. Please go to http://127.0.0.1:8000/init to initialize the data') 
+        return HttpResponse('No hotels exist. Please go to http://127.0.0.1:8000/ first to initialize the data') 
     hotel_list_output = "<ul>"
     for h in hotel_list:
         hotel_list_output += "<li>" + 'Hotel: '+h.name+\
@@ -65,7 +65,7 @@ def HotelInCity(request):
     #InitializeData(None)
     hotel_list= Hotel.get_hotels_in_city('Dubai')
     if len(hotel_list) == 0:
-        return HttpResponse('No hotels exist. Please go to http://127.0.0.1:8000/init to initialize the data') 
+        return HttpResponse('No hotels exist. Please go to http://127.0.0.1:8000/ first to initialize the data') 
     hotel_list_output = "<ul>"
     for h in hotel_list:
         hotel_list_output += "<li>" + h.name +\
@@ -80,7 +80,7 @@ def ReservationList(request):
     
     reservation_list= Reservation.reservations
     if len(reservation_list) == 0:
-        return HttpResponse('No reservations exist. Please go to http://127.0.0.1:8000/init to initialize the data') 
+        return HttpResponse('No reservations exist. Please go to http://127.0.0.1:8000/ first to initialize the data') 
     reservation_list_output = "<ul>"
     for r in reservation_list:
         reservation_list_output += "<li>" + 'Hotel: '+r.hotel.name +\
