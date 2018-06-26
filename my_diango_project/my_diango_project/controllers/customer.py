@@ -34,7 +34,7 @@ class Customer():
         found= False
         for customer in Customer.customers:
             if customer.name == self.name and\
-                customer.phone_number == self.phone_number:
+                customer.phone_num == self.phone_num:
                 found = True
         return found
 
@@ -45,5 +45,5 @@ class Customer():
     def remove_from_list(self):
         for customer in Customer.customers:
             if customer.name == self.name and\
-                customer.phone_number == self.phone_number:
+                customer.phone_num == self.phone_num:
                 Customer.customers.remove(customer)
